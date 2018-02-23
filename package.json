@@ -1,5 +1,6 @@
 {
   "name": "sourcelogic",
+  "version": "0.0.0",
   "main": "sourcelogic.js",
   "bin": {
     "sourcelogic": "sourcelogic.js"
