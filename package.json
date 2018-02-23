@@ -1,0 +1,14 @@
+{
+  "name": "sourcelogic",
+  "main": "sourcelogic.js",
+  "bin": {
+    "sourcelogic": "sourcelogic.js"
+  },
+  "dependencies": {
+    "bash.origin": "^0.1.90",
+    "bluebird": "^3.5.1",
+    "fs-extra": "^5.0.0",
+    "json": "^9.0.6",
+    "lodash": "^4.17.5"
+  }
+}
