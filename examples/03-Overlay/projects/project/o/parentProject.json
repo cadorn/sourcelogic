@@ -1,0 +1,11 @@
+{
+    "@context": "parentProject",
+    "localVarOverwritten": "localVal",
+    "sub1": {
+        "overwrittenVar": "localVal",        
+        "localVarOverwritten": "localVal"        
+    },
+    "sub2": {
+        "parentVarOverwritten": "localVal"
+    }
+}

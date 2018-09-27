@@ -1,0 +1,11 @@
+{
+    "@extends": "org.sourcelogic",
+    "@context": "parentProject",
+    "scripts": {
+        "start": [
+            "${__DIRNAME__}/../start.js"
+        ]
+    },
+    "parentProjectVar": "localVal",
+    "parentProjectGlobalVar": "localVal"    
+}

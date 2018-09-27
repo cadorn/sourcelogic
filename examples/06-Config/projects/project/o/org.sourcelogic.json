@@ -1,0 +1,6 @@
+{
+    "@context": "org.sourcelogic",
+    "origins": [
+        "subProject"
+    ]
+}

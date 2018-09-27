@@ -1,0 +1,20 @@
+{
+    "@extends": "parentProject",
+    "@context": "project",
+    "uid": "project",
+    "scripts": {
+        "start": [
+            "${__DIRNAME__}/../start.js"
+        ]
+    },    
+    "localVar": "localVal",
+    "overwrittenVar": "localVal",
+    "sub1": {
+        "localVar": "localVal",
+        "overwrittenVar": "localVal"        
+    },
+    "sub2": {
+        "overwrittenVar": "localVal",
+        "overwrittenVarGlobal": "localVal"
+    }
+}

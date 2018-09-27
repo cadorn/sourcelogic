@@ -1,0 +1,6 @@
+[
+    {
+        "@context": "parentProject",
+        "parentProjectGlobalVar": "globalVal-subProject"
+    }
+]

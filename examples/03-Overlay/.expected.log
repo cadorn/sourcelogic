@@ -1,0 +1,473 @@
+O.LAYERS {
+    "boot": [
+        "myOverlay"
+    ],
+    "origins": {
+        "project": {
+            "configs": {
+                "myOverlay": [
+                    {
+                        "path": "../../projects/project/o/myOverlay.json",
+                        "originRootPath": "../../projects/project",
+                        "config": {}
+                    }
+                ],
+                "project": [
+                    {
+                        "path": "../../projects/project/o/project.json",
+                        "originRootPath": "../../projects/project",
+                        "config": {
+                            "uid": "project",
+                            "scripts": {
+                                "start": [
+                                    "../../projects/project/o/../start.js"
+                                ]
+                            },
+                            "localVar": "localVal",
+                            "overwrittenVar": "localVal",
+                            "sub1": {
+                                "localVar": "localVal",
+                                "overwrittenVar": "localVal"
+                            },
+                            "sub2": {
+                                "overwrittenVar": "localVal",
+                                "overwrittenVarGlobal": "localVal"
+                            }
+                        }
+                    },
+                    {
+                        "path": "../../o/project.json",
+                        "originRootPath": "../..",
+                        "config": {
+                            "credentialVar": "project-credentialVal",
+                            "overwrittenVar": "project-credentialVal",
+                            "sub2": {
+                                "overwrittenVarGlobal": "project-credentialVal-by-project"
+                            }
+                        }
+                    }
+                ],
+                "parentProject": [
+                    {
+                        "path": "../../projects/project/o/parentProject.json",
+                        "originRootPath": "../../projects/project",
+                        "config": {
+                            "localVarOverwritten": "localVal",
+                            "sub1": {
+                                "overwrittenVar": "localVal",
+                                "localVarOverwritten": "localVal"
+                            },
+                            "sub2": {
+                                "parentVarOverwritten": "localVal"
+                            }
+                        }
+                    },
+                    {
+                        "path": "../../o/project.json",
+                        "originRootPath": "../..",
+                        "config": {
+                            "sub1": {
+                                "localVarOverwritten": "parentProject-credentialVal-by-project",
+                                "credentialVar": "parentProject-credentialVal-by-project"
+                            },
+                            "sub2": {
+                                "overwrittenVarGlobal": "parentProject-credentialVal-by-project",
+                                "credentialVar2": "parentProject-credentialVal-by-project"
+                            }
+                        }
+                    }
+                ]
+            },
+            "extends": [
+                "parentProject"
+            ]
+        },
+        "myOverlay": {
+            "extends": [
+                "overlayProject"
+            ]
+        },
+        "overlayProject": {
+            "configs": {
+                "overlayProject": [
+                    {
+                        "path": "../../projects/overlayProject/o/overlayProject.json",
+                        "originRootPath": "../../projects/overlayProject",
+                        "config": {}
+                    },
+                    {
+                        "path": "../../o/overlayProject.json",
+                        "originRootPath": "../..",
+                        "config": {
+                            "overlayVar": "overlayProject-overlayVal"
+                        }
+                    }
+                ],
+                "parentProject": [
+                    {
+                        "path": "../../projects/overlayProject/o/parentProject.json",
+                        "originRootPath": "../../projects/overlayProject",
+                        "config": {
+                            "overwrittenVar": "overlayVal",
+                            "overlayVar": "overlayVal",
+                            "sub2": {
+                                "parentVarOverwritten": "overlayVal",
+                                "overwrittenVarGlobal": "overlayVal"
+                            }
+                        }
+                    }
+                ],
+                "project": [
+                    {
+                        "path": "../../projects/overlayProject/o/project.json",
+                        "originRootPath": "../../projects/overlayProject",
+                        "config": {
+                            "sub2": {
+                                "overlayVar": "overlayVal",
+                                "overwrittenVar": "overlayVal",
+                                "overwrittenVarGlobal": "overlayVal"
+                            }
+                        }
+                    }
+                ]
+            },
+            "extends": [
+                "project"
+            ]
+        },
+        "parentProject": {
+            "configs": {
+                "parentProject": [
+                    {
+                        "path": "../../projects/parentProject/o/parentProject.json",
+                        "originRootPath": "../../projects/parentProject",
+                        "config": {
+                            "uid": "parentProject",
+                            "localVar": "parentVal",
+                            "localVarOverwritten": "parentVal",
+                            "overwrittenVar": "parentVal",
+                            "sub1": {
+                                "overwrittenVar": "parentVal",
+                                "localVarOverwritten": "parentVal"
+                            },
+                            "sub2": {
+                                "parentVar": "parentVal",
+                                "parentVarOverwritten": "parentVal"
+                            }
+                        }
+                    },
+                    {
+                        "path": "../../o/parentProject.json",
+                        "originRootPath": "../..",
+                        "config": {
+                            "credentialVar": "parentProject-credentialVal",
+                            "overwrittenVar": "parentProject-credentialVal",
+                            "sub1": {
+                                "localVarOverwritten": "parentProject-credentialVal",
+                                "credentialVar": "parentProject-credentialVal"
+                            },
+                            "sub2": {
+                                "credentialVar1": "parentProject-credentialVal",
+                                "credentialVar2": "parentProject-credentialVal"
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "layers": {
+        "overlayProject": [
+            {
+                "path": "../../o/overlayProject.json",
+                "originRootPath": "../..",
+                "config": {
+                    "overlayVar": "overlayProject-overlayVal"
+                }
+            },
+            {
+                "path": "../../projects/overlayProject/o/overlayProject.json",
+                "originRootPath": "../../projects/overlayProject",
+                "config": {}
+            }
+        ],
+        "parentProject": [
+            {
+                "path": "../../projects/overlayProject/o/parentProject.json",
+                "originRootPath": "../../projects/overlayProject",
+                "config": {
+                    "overwrittenVar": "overlayVal",
+                    "overlayVar": "overlayVal",
+                    "sub2": {
+                        "parentVarOverwritten": "overlayVal",
+                        "overwrittenVarGlobal": "overlayVal"
+                    }
+                }
+            },
+            {
+                "path": "../../o/project.json",
+                "originRootPath": "../..",
+                "config": {
+                    "sub1": {
+                        "localVarOverwritten": "parentProject-credentialVal-by-project",
+                        "credentialVar": "parentProject-credentialVal-by-project"
+                    },
+                    "sub2": {
+                        "overwrittenVarGlobal": "parentProject-credentialVal-by-project",
+                        "credentialVar2": "parentProject-credentialVal-by-project"
+                    }
+                }
+            },
+            {
+                "path": "../../projects/project/o/parentProject.json",
+                "originRootPath": "../../projects/project",
+                "config": {
+                    "localVarOverwritten": "localVal",
+                    "sub1": {
+                        "overwrittenVar": "localVal",
+                        "localVarOverwritten": "localVal"
+                    },
+                    "sub2": {
+                        "parentVarOverwritten": "localVal"
+                    }
+                }
+            },
+            {
+                "path": "../../o/parentProject.json",
+                "originRootPath": "../..",
+                "config": {
+                    "credentialVar": "parentProject-credentialVal",
+                    "overwrittenVar": "parentProject-credentialVal",
+                    "sub1": {
+                        "localVarOverwritten": "parentProject-credentialVal",
+                        "credentialVar": "parentProject-credentialVal"
+                    },
+                    "sub2": {
+                        "credentialVar1": "parentProject-credentialVal",
+                        "credentialVar2": "parentProject-credentialVal"
+                    }
+                }
+            },
+            {
+                "path": "../../projects/parentProject/o/parentProject.json",
+                "originRootPath": "../../projects/parentProject",
+                "config": {
+                    "uid": "parentProject",
+                    "localVar": "parentVal",
+                    "localVarOverwritten": "parentVal",
+                    "overwrittenVar": "parentVal",
+                    "sub1": {
+                        "overwrittenVar": "parentVal",
+                        "localVarOverwritten": "parentVal"
+                    },
+                    "sub2": {
+                        "parentVar": "parentVal",
+                        "parentVarOverwritten": "parentVal"
+                    }
+                }
+            },
+            {
+                "path": "../../o/project.json",
+                "originRootPath": "../..",
+                "config": {
+                    "sub1": {
+                        "localVarOverwritten": "parentProject-credentialVal-by-project",
+                        "credentialVar": "parentProject-credentialVal-by-project"
+                    },
+                    "sub2": {
+                        "overwrittenVarGlobal": "parentProject-credentialVal-by-project",
+                        "credentialVar2": "parentProject-credentialVal-by-project"
+                    }
+                }
+            },
+            {
+                "path": "../../projects/project/o/parentProject.json",
+                "originRootPath": "../../projects/project",
+                "config": {
+                    "localVarOverwritten": "localVal",
+                    "sub1": {
+                        "overwrittenVar": "localVal",
+                        "localVarOverwritten": "localVal"
+                    },
+                    "sub2": {
+                        "parentVarOverwritten": "localVal"
+                    }
+                }
+            },
+            {
+                "path": "../../o/parentProject.json",
+                "originRootPath": "../..",
+                "config": {
+                    "credentialVar": "parentProject-credentialVal",
+                    "overwrittenVar": "parentProject-credentialVal",
+                    "sub1": {
+                        "localVarOverwritten": "parentProject-credentialVal",
+                        "credentialVar": "parentProject-credentialVal"
+                    },
+                    "sub2": {
+                        "credentialVar1": "parentProject-credentialVal",
+                        "credentialVar2": "parentProject-credentialVal"
+                    }
+                }
+            },
+            {
+                "path": "../../projects/parentProject/o/parentProject.json",
+                "originRootPath": "../../projects/parentProject",
+                "config": {
+                    "uid": "parentProject",
+                    "localVar": "parentVal",
+                    "localVarOverwritten": "parentVal",
+                    "overwrittenVar": "parentVal",
+                    "sub1": {
+                        "overwrittenVar": "parentVal",
+                        "localVarOverwritten": "parentVal"
+                    },
+                    "sub2": {
+                        "parentVar": "parentVal",
+                        "parentVarOverwritten": "parentVal"
+                    }
+                }
+            }
+        ],
+        "project": [
+            {
+                "path": "../../projects/overlayProject/o/project.json",
+                "originRootPath": "../../projects/overlayProject",
+                "config": {
+                    "sub2": {
+                        "overlayVar": "overlayVal",
+                        "overwrittenVar": "overlayVal",
+                        "overwrittenVarGlobal": "overlayVal"
+                    }
+                }
+            },
+            {
+                "path": "../../o/project.json",
+                "originRootPath": "../..",
+                "config": {
+                    "credentialVar": "project-credentialVal",
+                    "overwrittenVar": "project-credentialVal",
+                    "sub2": {
+                        "overwrittenVarGlobal": "project-credentialVal-by-project"
+                    }
+                }
+            },
+            {
+                "path": "../../projects/project/o/project.json",
+                "originRootPath": "../../projects/project",
+                "config": {
+                    "uid": "project",
+                    "scripts": {
+                        "start": [
+                            "../../projects/project/o/../start.js"
+                        ]
+                    },
+                    "localVar": "localVal",
+                    "overwrittenVar": "localVal",
+                    "sub1": {
+                        "localVar": "localVal",
+                        "overwrittenVar": "localVal"
+                    },
+                    "sub2": {
+                        "overwrittenVar": "localVal",
+                        "overwrittenVarGlobal": "localVal"
+                    }
+                }
+            },
+            {
+                "path": "../../o/project.json",
+                "originRootPath": "../..",
+                "config": {
+                    "credentialVar": "project-credentialVal",
+                    "overwrittenVar": "project-credentialVal",
+                    "sub2": {
+                        "overwrittenVarGlobal": "project-credentialVal-by-project"
+                    }
+                }
+            },
+            {
+                "path": "../../projects/project/o/project.json",
+                "originRootPath": "../../projects/project",
+                "config": {
+                    "uid": "project",
+                    "scripts": {
+                        "start": [
+                            "../../projects/project/o/../start.js"
+                        ]
+                    },
+                    "localVar": "localVal",
+                    "overwrittenVar": "localVal",
+                    "sub1": {
+                        "localVar": "localVal",
+                        "overwrittenVar": "localVal"
+                    },
+                    "sub2": {
+                        "overwrittenVar": "localVal",
+                        "overwrittenVarGlobal": "localVal"
+                    }
+                }
+            }
+        ],
+        "myOverlay": [
+            {
+                "path": "../../projects/project/o/myOverlay.json",
+                "originRootPath": "../../projects/project",
+                "config": {}
+            },
+            {
+                "path": "../../projects/project/o/myOverlay.json",
+                "originRootPath": "../../projects/project",
+                "config": {}
+            }
+        ]
+    },
+    "subOrigins": {}
+}
+O.CONFIG {
+    "_rOrigin": "myOverlay",
+    "overlayProject": {
+        "overlayVar": "overlayProject-overlayVal"
+    },
+    "parentProject": {
+        "uid": "parentProject",
+        "localVar": "parentVal",
+        "localVarOverwritten": "localVal",
+        "overwrittenVar": "overlayVal",
+        "sub1": {
+            "overwrittenVar": "localVal",
+            "localVarOverwritten": "parentProject-credentialVal-by-project",
+            "credentialVar": "parentProject-credentialVal-by-project"
+        },
+        "sub2": {
+            "parentVar": "parentVal",
+            "parentVarOverwritten": "overlayVal",
+            "credentialVar1": "parentProject-credentialVal",
+            "credentialVar2": "parentProject-credentialVal-by-project",
+            "overwrittenVarGlobal": "overlayVal"
+        },
+        "credentialVar": "parentProject-credentialVal",
+        "overlayVar": "overlayVal"
+    },
+    "project": {
+        "uid": "project",
+        "scripts": {
+            "start": [
+                "../../projects/project/o/../start.js"
+            ]
+        },
+        "localVar": "localVal",
+        "overwrittenVar": "project-credentialVal",
+        "sub1": {
+            "localVar": "localVal",
+            "overwrittenVar": "localVal"
+        },
+        "sub2": {
+            "overwrittenVar": "overlayVal",
+            "overwrittenVarGlobal": "overlayVal",
+            "overlayVar": "overlayVal"
+        },
+        "credentialVar": "project-credentialVal"
+    },
+    "myOverlay": {}
+}
+parentProject:sub2.overwrittenVarGlobal should be 'parentProject-credentialVal-by-project'

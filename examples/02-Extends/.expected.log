@@ -1,0 +1,280 @@
+O.LAYERS {
+    "boot": [
+        "project"
+    ],
+    "origins": {
+        "project": {
+            "configs": {
+                "project": [
+                    {
+                        "path": "../../projects/project/o/project.json",
+                        "originRootPath": "../../projects/project",
+                        "config": {
+                            "uid": "project",
+                            "scripts": {
+                                "start": [
+                                    "../../projects/project/o/../start.js"
+                                ]
+                            },
+                            "localVar": "localVal",
+                            "overwrittenVar": "localVal",
+                            "sub1": {
+                                "localVar": "localVal",
+                                "overwrittenVar": "localVal"
+                            }
+                        }
+                    },
+                    {
+                        "path": "../../o/project.json",
+                        "originRootPath": "../..",
+                        "config": {
+                            "credentialVar": "project-credentialVal",
+                            "overwrittenVar": "project-credentialVal"
+                        }
+                    }
+                ],
+                "parentProject": [
+                    {
+                        "path": "../../projects/project/o/parentProject.json",
+                        "originRootPath": "../../projects/project",
+                        "config": {
+                            "localVarOverwritten": "localVal",
+                            "sub1": {
+                                "overwrittenVar": "localVal",
+                                "localVarOverwritten": "localVal"
+                            }
+                        }
+                    },
+                    {
+                        "path": "../../o/project.json",
+                        "originRootPath": "../..",
+                        "config": {
+                            "sub1": {
+                                "localVarOverwritten": "parentProject-credentialVal-by-project",
+                                "credentialVar": "parentProject-credentialVal-by-project"
+                            }
+                        }
+                    }
+                ]
+            },
+            "extends": [
+                "parentProject"
+            ]
+        },
+        "parentProject": {
+            "configs": {
+                "parentProject": [
+                    {
+                        "path": "../../projects/parentProject/o/parentProject.json",
+                        "originRootPath": "../../projects/parentProject",
+                        "config": {
+                            "uid": "parentProject",
+                            "localVar": "parentVal",
+                            "localVarOverwritten": "parentVal",
+                            "overwrittenVar": "parentVal",
+                            "sub1": {
+                                "overwrittenVar": "parentVal",
+                                "localVarOverwritten": "parentVal"
+                            }
+                        }
+                    },
+                    {
+                        "path": "../../o/parentProject.json",
+                        "originRootPath": "../..",
+                        "config": {
+                            "credentialVar": "parentProject-credentialVal",
+                            "overwrittenVar": "parentProject-credentialVal",
+                            "sub1": {
+                                "localVarOverwritten": "parentProject-credentialVal",
+                                "credentialVar": "parentProject-credentialVal"
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "layers": {
+        "project": [
+            {
+                "path": "../../o/project.json",
+                "originRootPath": "../..",
+                "config": {
+                    "credentialVar": "project-credentialVal",
+                    "overwrittenVar": "project-credentialVal"
+                }
+            },
+            {
+                "path": "../../projects/project/o/project.json",
+                "originRootPath": "../../projects/project",
+                "config": {
+                    "uid": "project",
+                    "scripts": {
+                        "start": [
+                            "../../projects/project/o/../start.js"
+                        ]
+                    },
+                    "localVar": "localVal",
+                    "overwrittenVar": "localVal",
+                    "sub1": {
+                        "localVar": "localVal",
+                        "overwrittenVar": "localVal"
+                    }
+                }
+            },
+            {
+                "path": "../../o/project.json",
+                "originRootPath": "../..",
+                "config": {
+                    "credentialVar": "project-credentialVal",
+                    "overwrittenVar": "project-credentialVal"
+                }
+            },
+            {
+                "path": "../../projects/project/o/project.json",
+                "originRootPath": "../../projects/project",
+                "config": {
+                    "uid": "project",
+                    "scripts": {
+                        "start": [
+                            "../../projects/project/o/../start.js"
+                        ]
+                    },
+                    "localVar": "localVal",
+                    "overwrittenVar": "localVal",
+                    "sub1": {
+                        "localVar": "localVal",
+                        "overwrittenVar": "localVal"
+                    }
+                }
+            }
+        ],
+        "parentProject": [
+            {
+                "path": "../../o/project.json",
+                "originRootPath": "../..",
+                "config": {
+                    "sub1": {
+                        "localVarOverwritten": "parentProject-credentialVal-by-project",
+                        "credentialVar": "parentProject-credentialVal-by-project"
+                    }
+                }
+            },
+            {
+                "path": "../../projects/project/o/parentProject.json",
+                "originRootPath": "../../projects/project",
+                "config": {
+                    "localVarOverwritten": "localVal",
+                    "sub1": {
+                        "overwrittenVar": "localVal",
+                        "localVarOverwritten": "localVal"
+                    }
+                }
+            },
+            {
+                "path": "../../o/parentProject.json",
+                "originRootPath": "../..",
+                "config": {
+                    "credentialVar": "parentProject-credentialVal",
+                    "overwrittenVar": "parentProject-credentialVal",
+                    "sub1": {
+                        "localVarOverwritten": "parentProject-credentialVal",
+                        "credentialVar": "parentProject-credentialVal"
+                    }
+                }
+            },
+            {
+                "path": "../../projects/parentProject/o/parentProject.json",
+                "originRootPath": "../../projects/parentProject",
+                "config": {
+                    "uid": "parentProject",
+                    "localVar": "parentVal",
+                    "localVarOverwritten": "parentVal",
+                    "overwrittenVar": "parentVal",
+                    "sub1": {
+                        "overwrittenVar": "parentVal",
+                        "localVarOverwritten": "parentVal"
+                    }
+                }
+            },
+            {
+                "path": "../../o/project.json",
+                "originRootPath": "../..",
+                "config": {
+                    "sub1": {
+                        "localVarOverwritten": "parentProject-credentialVal-by-project",
+                        "credentialVar": "parentProject-credentialVal-by-project"
+                    }
+                }
+            },
+            {
+                "path": "../../projects/project/o/parentProject.json",
+                "originRootPath": "../../projects/project",
+                "config": {
+                    "localVarOverwritten": "localVal",
+                    "sub1": {
+                        "overwrittenVar": "localVal",
+                        "localVarOverwritten": "localVal"
+                    }
+                }
+            },
+            {
+                "path": "../../o/parentProject.json",
+                "originRootPath": "../..",
+                "config": {
+                    "credentialVar": "parentProject-credentialVal",
+                    "overwrittenVar": "parentProject-credentialVal",
+                    "sub1": {
+                        "localVarOverwritten": "parentProject-credentialVal",
+                        "credentialVar": "parentProject-credentialVal"
+                    }
+                }
+            },
+            {
+                "path": "../../projects/parentProject/o/parentProject.json",
+                "originRootPath": "../../projects/parentProject",
+                "config": {
+                    "uid": "parentProject",
+                    "localVar": "parentVal",
+                    "localVarOverwritten": "parentVal",
+                    "overwrittenVar": "parentVal",
+                    "sub1": {
+                        "overwrittenVar": "parentVal",
+                        "localVarOverwritten": "parentVal"
+                    }
+                }
+            }
+        ]
+    },
+    "subOrigins": {}
+}
+O.CONFIG {
+    "_rOrigin": "project",
+    "project": {
+        "uid": "project",
+        "scripts": {
+            "start": [
+                "../../projects/project/o/../start.js"
+            ]
+        },
+        "localVar": "localVal",
+        "overwrittenVar": "project-credentialVal",
+        "sub1": {
+            "localVar": "localVal",
+            "overwrittenVar": "localVal"
+        },
+        "credentialVar": "project-credentialVal"
+    },
+    "parentProject": {
+        "uid": "parentProject",
+        "localVar": "parentVal",
+        "localVarOverwritten": "localVal",
+        "overwrittenVar": "parentProject-credentialVal",
+        "sub1": {
+            "overwrittenVar": "localVal",
+            "localVarOverwritten": "parentProject-credentialVal-by-project",
+            "credentialVar": "parentProject-credentialVal-by-project"
+        },
+        "credentialVar": "parentProject-credentialVal"
+    }
+}

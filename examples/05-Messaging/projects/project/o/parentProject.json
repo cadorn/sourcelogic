@@ -1,0 +1,8 @@
+{
+    "@context": "parentProject",
+    "scripts": {
+        "start": [
+            "${__DIRNAME__}/../start.js"
+        ]
+    }
+}

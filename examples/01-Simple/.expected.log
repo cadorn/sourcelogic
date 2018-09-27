@@ -1,0 +1,98 @@
+O.LAYERS {
+    "boot": [
+        "project"
+    ],
+    "origins": {
+        "project": {
+            "configs": {
+                "project": [
+                    {
+                        "path": "../../01-Simple/project/o/project.json",
+                        "originRootPath": "../../01-Simple/project",
+                        "config": {
+                            "uid": "project",
+                            "scripts": {
+                                "start": [
+                                    "../../01-Simple/project/o/../start.js"
+                                ]
+                            },
+                            "localVar": "localVal",
+                            "overwrittenVar": "localVal"
+                        }
+                    },
+                    {
+                        "path": "../../01-Simple/o/project.json",
+                        "originRootPath": "../../01-Simple",
+                        "config": {
+                            "credentialVar": "credentialVal",
+                            "overwrittenVar": "credentialVal"
+                        }
+                    }
+                ]
+            }
+        }
+    },
+    "layers": {
+        "project": [
+            {
+                "path": "../../01-Simple/o/project.json",
+                "originRootPath": "../../01-Simple",
+                "config": {
+                    "credentialVar": "credentialVal",
+                    "overwrittenVar": "credentialVal"
+                }
+            },
+            {
+                "path": "../../01-Simple/project/o/project.json",
+                "originRootPath": "../../01-Simple/project",
+                "config": {
+                    "uid": "project",
+                    "scripts": {
+                        "start": [
+                            "../../01-Simple/project/o/../start.js"
+                        ]
+                    },
+                    "localVar": "localVal",
+                    "overwrittenVar": "localVal"
+                }
+            },
+            {
+                "path": "../../01-Simple/o/project.json",
+                "originRootPath": "../../01-Simple",
+                "config": {
+                    "credentialVar": "credentialVal",
+                    "overwrittenVar": "credentialVal"
+                }
+            },
+            {
+                "path": "../../01-Simple/project/o/project.json",
+                "originRootPath": "../../01-Simple/project",
+                "config": {
+                    "uid": "project",
+                    "scripts": {
+                        "start": [
+                            "../../01-Simple/project/o/../start.js"
+                        ]
+                    },
+                    "localVar": "localVal",
+                    "overwrittenVar": "localVal"
+                }
+            }
+        ]
+    },
+    "subOrigins": {}
+}
+O.CONFIG {
+    "_rOrigin": "project",
+    "project": {
+        "uid": "project",
+        "scripts": {
+            "start": [
+                "../../01-Simple/project/o/../start.js"
+            ]
+        },
+        "localVar": "localVal",
+        "overwrittenVar": "credentialVal",
+        "credentialVar": "credentialVal"
+    }
+}

@@ -1,0 +1,38 @@
+{
+    "_rOrigin": "project",
+    "project": {
+        "projectLocalVar": "localVal",
+        "projectGlobalVar": "globalVal-project"
+    },
+    "org.sourcelogic": {
+        "origins": [
+            "subProject"
+        ],
+        "origins$": {
+            "subProject": {
+                "config": {
+                    "_rOrigin": "subProject",
+                    "subProject": {},
+                    "parentProject": {
+                        "scripts": {
+                            "start": [
+                                "TeStLoCaLiZeD/projects/parentProject/o/../start.js"
+                            ]
+                        },
+                        "parentProjectVar": "localVal",
+                        "parentProjectGlobalVar": "globalVal-subProject"
+                    }
+                }
+            }
+        }
+    },
+    "parentProject": {
+        "scripts": {
+            "start": [
+                "TeStLoCaLiZeD/projects/parentProject/o/../start.js"
+            ]
+        },
+        "parentProjectVar": "localVal",
+        "parentProjectGlobalVar": "globalVal-project"
+    }
+}

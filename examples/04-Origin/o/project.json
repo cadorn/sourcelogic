@@ -1,0 +1,10 @@
+[
+    {
+        "@context": "project",
+        "projectGlobalVar": "globalVal-project"
+    },
+    {
+        "@context": "parentProject",
+        "parentProjectGlobalVar": "globalVal-project"
+    }
+]

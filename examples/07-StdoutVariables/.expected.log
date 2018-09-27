@@ -1,0 +1,47 @@
+>>>TEST_IGNORE_LINE:\[org\.sourcelogic\]\[O_CID_<<<
+{
+    "_rOrigin": "project",
+    "project": {},
+    "org.sourcelogic": {
+        "origins": [
+            "subProject"
+        ],
+        "origins$": {
+            "subProject": {}
+        }
+    },
+    "parentProject": {
+        "scripts": {
+            "start": [
+                "TeStLoCaLiZeD/projects/parentProject/o/../start.js",
+                "TeStLoCaLiZeD/projects/project/o/../start.js"
+            ]
+        }
+    },
+    ":subProject@parentProject/hello": {
+        "event": "from parentProject"
+    },
+    ":subProject@dynamicVarFromSubProject": {
+        "key1": "val1",
+        "key2": [
+            "item1",
+            "item2"
+        ]
+    },
+    ":dynamicVarFromSubProject": {
+        "key1": "val1",
+        "key2": [
+            "item1",
+            "item2"
+        ]
+    },
+    ":subProject@parentProject/ping": {
+        "event": "from project"
+    },
+    ":subProject@parentProject/pong": {
+        "event": "from subProject",
+        "message": {
+            "event": "from project"
+        }
+    }
+}

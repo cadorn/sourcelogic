@@ -1,0 +1,5 @@
+{
+    "@context": "project",
+    "credentialVar": "credentialVal",
+    "overwrittenVar": "credentialVal"
+}

@@ -1,1 +1,3 @@
 /node_modules/
+*~.compiled.bash
+.actual.*

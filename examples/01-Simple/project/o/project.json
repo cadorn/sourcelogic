@@ -1,0 +1,11 @@
+{
+    "@context": "project",
+    "uid": "project",
+    "scripts": {
+        "start": [
+            "${__DIRNAME__}/../start.js"
+        ]
+    },    
+    "localVar": "localVal",
+    "overwrittenVar": "localVal"
+}

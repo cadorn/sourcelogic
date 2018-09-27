@@ -1,0 +1,15 @@
+{
+    "@context": "parentProject",
+    "uid": "parentProject",
+    "localVar": "parentVal",
+    "localVarOverwritten": "parentVal",
+    "overwrittenVar": "parentVal",
+    "sub1": {
+        "overwrittenVar": "parentVal",
+        "localVarOverwritten": "parentVal"
+    },
+    "sub2": {
+        "parentVar": "parentVal",
+        "parentVarOverwritten": "parentVal"
+    }
+}

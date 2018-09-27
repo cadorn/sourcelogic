@@ -1,0 +1,6 @@
+{
+    "@extends": "parentProject",
+    "@context": "project",
+    "projectLocalVar": "localVal",
+    "projectGlobalVar": "localVal"
+}

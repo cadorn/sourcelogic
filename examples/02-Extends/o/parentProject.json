@@ -1,0 +1,9 @@
+{
+    "@context": "parentProject",
+    "credentialVar": "parentProject-credentialVal",
+    "overwrittenVar": "parentProject-credentialVal",
+    "sub1": {
+        "localVarOverwritten": "parentProject-credentialVal",
+        "credentialVar": "parentProject-credentialVal"        
+    }    
+}

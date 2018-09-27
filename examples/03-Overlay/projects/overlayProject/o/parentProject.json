@@ -1,0 +1,9 @@
+{
+    "@context": "parentProject",
+    "overwrittenVar": "overlayVal",
+    "overlayVar": "overlayVal",
+    "sub2": {
+        "parentVarOverwritten": "overlayVal",
+        "overwrittenVarGlobal": "overlayVal"
+    }
+}

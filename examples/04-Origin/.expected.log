@@ -1,0 +1,84 @@
+parentProject O.CONFIG {
+    "_rOrigin": "project",
+    "project": {
+        "projectLocalVar": "localVal",
+        "projectGlobalVar": "globalVal-project"
+    },
+    "org.sourcelogic": {
+        "origins": [
+            "subProject"
+        ]
+    },
+    "parentProject": {
+        "scripts": {
+            "start": [
+                "../../projects/parentProject/o/../start.js",
+                "../../projects/project/o/../start.js"
+            ]
+        },
+        "parentProjectVar": "localVal",
+        "parentProjectGlobalVar": "globalVal-project"
+    },
+    "subProject": {
+        "parentProject": {
+            "originOverlayVar": "originOverlayVal"
+        }
+    }
+}
+project O.CONFIG {
+    "_rOrigin": "project",
+    "project": {
+        "projectLocalVar": "localVal",
+        "projectGlobalVar": "globalVal-project"
+    },
+    "org.sourcelogic": {
+        "origins": [
+            "subProject"
+        ]
+    },
+    "parentProject": {
+        "scripts": {
+            "start": [
+                "../../projects/parentProject/o/../start.js",
+                "../../projects/project/o/../start.js"
+            ]
+        },
+        "parentProjectVar": "localVal",
+        "parentProjectGlobalVar": "globalVal-project"
+    },
+    "subProject": {
+        "parentProject": {
+            "originOverlayVar": "originOverlayVal"
+        }
+    }
+}
+parentProject O.CONFIG {
+    "_rOrigin": "subProject",
+    "subProject": {},
+    "parentProject": {
+        "scripts": {
+            "start": [
+                "../../projects/parentProject/o/../start.js",
+                "../../projects/subProject/o/../start.js"
+            ]
+        },
+        "parentProjectVar": "localVal",
+        "parentProjectGlobalVar": "globalVal-subProject",
+        "originOverlayVar": "originOverlayVal"
+    }
+}
+subProject O.CONFIG {
+    "_rOrigin": "subProject",
+    "subProject": {},
+    "parentProject": {
+        "scripts": {
+            "start": [
+                "../../projects/parentProject/o/../start.js",
+                "../../projects/subProject/o/../start.js"
+            ]
+        },
+        "parentProjectVar": "localVal",
+        "parentProjectGlobalVar": "globalVal-subProject",
+        "originOverlayVar": "originOverlayVal"
+    }
+}
